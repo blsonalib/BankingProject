@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="660c1d94-3888-4c1d-aafd-e4a4e739056c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bV1zAMKV0wyPhleKz0J0jXikWP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Driver" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Driver" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.LoginTest.login">
+    <configuration name="LoginTest.login" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.LoginTest.login&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ManagerHomePageTest.clickOnEditCustomerPageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.ManagerHomePageTest.clickOnEditCustomerPageTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ManagerHomePageTest.clickOnNewAccountPageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.ManagerHomePageTest.clickOnNewAccountPageTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ManagerHomePageTest.clickOnNewCustomerPageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.ManagerHomePageTest.clickOnNewCustomerPageTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="NewCustomerPageTest.addAllFieldTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.NewCustomerPageTest.addAllFieldTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.LoginTest.login" />
+        <item itemvalue="Gradle.NewCustomerPageTest.addAllFieldTest" />
+        <item itemvalue="Gradle.ManagerHomePageTest.clickOnNewCustomerPageTest" />
+        <item itemvalue="Gradle.ManagerHomePageTest.clickOnNewAccountPageTest" />
+        <item itemvalue="Gradle.ManagerHomePageTest.clickOnEditCustomerPageTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="660c1d94-3888-4c1d-aafd-e4a4e739056c" name="Default Changelist" comment="" />
+      <created>1588702707147</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588702707147</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="310" y="151" key="#Project_Structure" timestamp="1589989682245">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="310" y="151" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1589989682245" />
+    <state x="310" y="158" key="#Project_Structure/0.23.1680.939@0.23.1680.939" timestamp="1589872771938" />
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom" timestamp="1589995783843">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589995783843" />
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom/0.23.1680.939@0.23.1680.939" timestamp="1589985231252" />
+    <state width="1638" height="250" key="GridCell.Tab.0.center" timestamp="1589995783842">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589995783842" />
+    <state width="1638" height="250" key="GridCell.Tab.0.center/0.23.1680.939@0.23.1680.939" timestamp="1589985231252" />
+    <state width="1638" height="250" key="GridCell.Tab.0.left" timestamp="1589995783841">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589995783841" />
+    <state width="1638" height="250" key="GridCell.Tab.0.left/0.23.1680.939@0.23.1680.939" timestamp="1589985231251" />
+    <state width="1638" height="250" key="GridCell.Tab.0.right" timestamp="1589995783842">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589995783842" />
+    <state width="1638" height="250" key="GridCell.Tab.0.right/0.23.1680.939@0.23.1680.939" timestamp="1589985231252" />
+    <state width="1378" height="310" key="GridCell.Tab.1.bottom" timestamp="1588706080877">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state width="1378" height="310" key="GridCell.Tab.1.bottom/0.23.1680.939@0.23.1680.939" timestamp="1588706080877" />
+    <state width="1378" height="310" key="GridCell.Tab.1.center" timestamp="1588706080877">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state width="1378" height="310" key="GridCell.Tab.1.center/0.23.1680.939@0.23.1680.939" timestamp="1588706080877" />
+    <state width="1378" height="310" key="GridCell.Tab.1.left" timestamp="1588706080877">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state width="1378" height="310" key="GridCell.Tab.1.left/0.23.1680.939@0.23.1680.939" timestamp="1588706080877" />
+    <state width="1378" height="310" key="GridCell.Tab.1.right" timestamp="1588706080877">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state width="1378" height="310" key="GridCell.Tab.1.right/0.23.1680.939@0.23.1680.939" timestamp="1588706080877" />
+    <state x="219" y="121" key="SettingsEditor" timestamp="1589912754579">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="219" y="121" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1589912754579" />
+    <state x="219" y="131" key="SettingsEditor/0.23.1680.939@0.23.1680.939" timestamp="1588705786177" />
+    <state x="519" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1589987449722">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state x="519" y="338" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1589911052970" />
+    <state x="519" y="325" key="com.intellij.ide.util.TipDialog/0.23.1680.939@0.23.1680.939" timestamp="1589987449722" />
+    <state x="0" y="217" width="816" height="550" key="find.popup" timestamp="1589889321912">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state x="0" y="217" width="816" height="550" key="find.popup/0.23.1680.939@0.23.1680.939" timestamp="1589889321912" />
+  </component>
+</project>
