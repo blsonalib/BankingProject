@@ -1,7 +1,9 @@
 package com.banking.base;
 
 
+import com.banking.util.IAutoConstant;
 import com.banking.util.TestUtil;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,12 +17,13 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     public static Properties properties ;
     public static  WebDriver driver;
+    public static final Logger log = Logger.getLogger(BaseTest.class);
     FileInputStream fileInputStream;
 
     {
         try {
             properties = new Properties();
-            fileInputStream = new FileInputStream("/Users/sonalibankar/Desktop/BankingProject/src/main/java/com/banking/config/config.properties");
+            fileInputStream = new FileInputStream(IAutoConstant.CONFIG_FILE_PATH);
             properties.load(fileInputStream);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -31,10 +34,10 @@ public class BaseTest {
     public static void initialize(){
         String browseName = properties.getProperty("browser");
         if(browseName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "/Users/sonalibankar/Desktop/FacebookProject/Driver/chromedriver 2");
+            System.setProperty(IAutoConstant.CHROM_KEY,IAutoConstant.CHROM_VALUE);
             driver = new ChromeDriver();
         }else if(browseName.equalsIgnoreCase("firefox")){
-            System.setProperty("webdriver.driver.gecko","/Users/sonalibankar/Desktop/FacebookProject/Driver/geckodriver");
+            System.setProperty(IAutoConstant.GECKO_KEY,IAutoConstant.GECKO_VALUE);
             driver = new FirefoxDriver();
         }
         driver.manage().deleteAllCookies();

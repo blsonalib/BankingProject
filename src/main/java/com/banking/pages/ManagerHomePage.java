@@ -12,7 +12,7 @@ public class ManagerHomePage extends BaseTest {
     private WebElement editCustomerLink;
     @FindBy(linkText = "New Account")
     private WebElement newAccount;
-    @FindBy(xpath = "//a[contains(text(),'Log out')]")
+    @FindBy(xpath = "//div[contains(text(),'Log out')]")
     private WebElement logOutt;
     public ManagerHomePage(){
         PageFactory.initElements(driver,this);
