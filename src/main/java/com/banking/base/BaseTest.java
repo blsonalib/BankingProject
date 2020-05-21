@@ -2,6 +2,7 @@ package com.banking.base;
 
 
 import com.banking.util.TestUtil;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,6 +14,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
+    public static final Logger log = Logger.getLogger(BaseTest.class);
     public static Properties properties ;
     public static  WebDriver driver;
     FileInputStream fileInputStream;
