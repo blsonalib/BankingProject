@@ -1,9 +1,19 @@
 package com.banking.extendreport;
 import java.io.File;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import org.testng.IReporter;
 import org.testng.IResultMap;
@@ -66,11 +76,28 @@ public class ExtentReport implements IReporter {
         }
     }
 
-    private Date getTime(long millis) {
+
+   private Date getTime(long millis) {
+
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
         return calendar.getTime();
     }
+
+
+    public static String getScreenshot(WebDriver driver, String screenshotname) throws IOException {
+        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        // after execution, you could see a folder "FailedTestsScreenshots"
+        // under src folder
+        String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/" +screenshotname+ dateName
+                + ".png";
+        File finalDestination = new File(destination);
+        FileUtils.copyFile(source, finalDestination);
+        return destination;
+    }
+
 }
 
 

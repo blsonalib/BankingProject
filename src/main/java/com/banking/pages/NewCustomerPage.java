@@ -26,8 +26,13 @@ public class NewCustomerPage extends BaseTest {
     private WebElement emailId;
     @FindBy(name = "sub")
     private WebElement submit;
+    @FindBy(xpath = "//a[contains(text(),'Home')]")
+    private WebElement clickOnHome;
     public NewCustomerPage(){
         PageFactory.initElements(driver,this);
+    }
+    public String verifyTitle(){
+       return driver.getTitle();
     }
     public void setCustomerName(String cName){
         customerName.sendKeys(cName);
@@ -58,5 +63,9 @@ public class NewCustomerPage extends BaseTest {
     }
     public void setSubmitButton(){
         submit.click();
+    }
+    public ManagerHomePage clickOnHomeLink(){
+        clickOnHome.click();
+        return new ManagerHomePage();
     }
 }

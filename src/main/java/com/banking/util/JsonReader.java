@@ -7,7 +7,9 @@ import java.io.FileReader;
 import java.util.Map;
 
 public class JsonReader {
-    public static Object[][] getdata(String JSON_path, String typeData, int totalDataRow, int totalColumnEntry) throws JsonIOException, JsonSyntaxException, FileNotFoundException {
+
+    public static Object[][] getdata(String JSON_path, String typeData, int totalDataRow, int totalColumnEntry) throws JsonIOException, JsonSyntaxException, FileNotFoundException, FileNotFoundException {
+
         JsonParser jsonParser = new JsonParser();
         JsonObject jsonObj = jsonParser.parse(new FileReader(JSON_path)).getAsJsonObject();
         JsonArray array = (JsonArray) jsonObj.get(typeData);
@@ -28,4 +30,6 @@ public class JsonReader {
         }
         return matrix;
     }
+
 }
+
