@@ -2,6 +2,7 @@ package com.banking.testcases;
 import com.banking.base.BaseTest;
 import com.banking.pages.LoginPage;
 import com.banking.pages.ManagerHomePage;
+import com.banking.util.IAutoConstant;
 import com.banking.util.JsonReader;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -10,6 +11,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class LoginTest extends BaseTest {
     LoginPage loginPage;
@@ -25,11 +27,11 @@ public class LoginTest extends BaseTest {
         managerHomePage = new ManagerHomePage();
     }
     @Test
-    public void verifyTitleOfLoginPageTest(){
-
+    public void verifyTitleOfLoginPageTest() throws IOException {
       String title = loginPage.verifyTitleOfLoginPage();
-        Assert.assertEquals(title,"GTPL Bank Home Page","Title not matched");
+        Assert.assertEquals(title,"00GTPL Bank Home Page","Title not matched");
         log.info("Title is matched");
+
     }
     @Test(dataProvider = "Login")
     public void login(String userName,String password){
@@ -37,11 +39,11 @@ public class LoginTest extends BaseTest {
     }
     @DataProvider(name = "Login")
     public Object[][] passData() throws FileNotFoundException {
-        return JsonReader.getdata("/Users/sonalibankar/Desktop/BankingProject/src/main/java/com/banking/testdata/LoginData.json","Login",2,2);
+        return JsonReader.getdata(IAutoConstant.JSON_LOGIN_PATH,"Login",2,2);
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }
