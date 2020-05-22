@@ -7,9 +7,9 @@
     <test verbose="2" preserve-order="true"
           name="BankingProject">
         <classes>
-            <class name="com.banking.testcases.LoginTest"/>
-            <class name="com.banking.testcases.ManagerHomePageTest"/>
-            <class name="com.banking.testcases.NewCustomerPageTest"/>
-        </classes>
-    </test>
-</suite>
+           <class name="com.banking.testcases.LoginTest"/>
+            <!-- <class name="com.banking.testcases.ManagerHomePageTest"/> !-->
+              <class name="com.banking.testcases.NewCustomerPageTest"/>
+          </classes>
+      </test>
+  </suite>

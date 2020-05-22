@@ -1,103 +1,87 @@
 package com.banking.extendreport;
-import java.io.File;
 
+//Listener class used to generate Extent reports
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-
-import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
-import org.testng.IReporter;
-import org.testng.IResultMap;
-import org.testng.ISuite;
-import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.xml.XmlSuite;
+import org.testng.TestListenerAdapter;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import static com.banking.base.BaseTest.captureScreen;
 
-public class ExtentReport implements IReporter {
-    private ExtentReports extent;
+public class ExtentReport extends TestListenerAdapter {
+    public ExtentHtmlReporter htmlReporter;
+    public ExtentReports extent;
+    public ExtentTest logger;
+     WebDriver driver;
+    public void onStart(ITestContext testContext)
+    {
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
+        String repName="Test-Report-"+timeStamp+".html";
 
-    public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
-                               String outputDirectory) {
-        extent = new ExtentReports(outputDirectory + File.separator
-                + "BankingExtent.html", true);
+        htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/"+repName);//specify location of the report
+        //htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
 
-        for (ISuite suite : suites) {
-            Map<String, ISuiteResult> result = suite.getResults();
+        extent=new ExtentReports();
 
-            for (ISuiteResult r : result.values()) {
-                ITestContext context = r.getTestContext();
+        extent.attachReporter(htmlReporter);
+        extent.setSystemInfo("Host name","localhost");
+        extent.setSystemInfo("Environemnt","QA");
+        extent.setSystemInfo("user","sonali");
 
-                buildTestNodes(context.getPassedTests(), LogStatus.PASS);
-                buildTestNodes(context.getFailedTests(), LogStatus.FAIL);
-                buildTestNodes(context.getSkippedTests(), LogStatus.SKIP);
+        htmlReporter.config().setDocumentTitle("InetBanking Test Project"); // Tile of report
+        htmlReporter.config().setReportName("Functional Test Automation Report"); // name of the report
+        htmlReporter.config().setTheme(Theme.DARK);
+    }
+
+    public void onTestSuccess(ITestResult result)
+    {
+        logger=extent.createTest(result.getName()); // create new entry in th report
+        logger.log(Status.PASS,MarkupHelper.createLabel(result.getName(),ExtentColor.GREEN)); // send the passed information to the report with GREEN color highlighted
+    }
+
+    public void onTestFailure(ITestResult result)
+    {
+        logger=extent.createTest(result.getName()); // create new entry in th report
+        logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
+        logger.log(Status.FAIL,MarkupHelper.createCodeBlock(result.getName()));
+        String screenshotPath = System.getProperty("user.dir")+"/Screenshots/"+result.getName()+".png";
+        File f = new File(screenshotPath);
+
+        if(f.exists())
+        {
+            try {
+                logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(screenshotPath));
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
             }
         }
 
+    }
+
+    public void onTestSkipped(ITestResult result)
+    {
+        logger=extent.createTest(result.getName()); // create new entry in th report
+        logger.log(Status.SKIP,MarkupHelper.createLabel(result.getName(),ExtentColor.ORANGE));
+    }
+
+    public void onFinish(ITestContext testContext)
+    {
         extent.flush();
-        extent.close();
     }
-
-    private void buildTestNodes(IResultMap tests, LogStatus status) {
-        ExtentTest test;
-
-        if (tests.size() > 0) {
-            for (ITestResult result : tests.getAllResults()) {
-                test = extent.startTest(result.getMethod().getMethodName());
-
-                test.setStartedTime(getTime(result.getStartMillis()));
-                test.setEndedTime(getTime(result.getEndMillis()));
-
-                for (String group : result.getMethod().getGroups())
-                    test.assignCategory(group);
-
-                if (result.getThrowable() != null) {
-                    test.log(status, result.getThrowable());
-                } else {
-                    test.log(status, "Test " + status.toString().toLowerCase()
-                            + "ed");
-                }
-
-                extent.endTest(test);
-            }
-        }
-    }
-
-
-   private Date getTime(long millis) {
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(millis);
-        return calendar.getTime();
-    }
-
-
-    public static String getScreenshot(WebDriver driver, String screenshotname) throws IOException {
-        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        // after execution, you could see a folder "FailedTestsScreenshots"
-        // under src folder
-        String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/" +screenshotname+ dateName
-                + ".png";
-        File finalDestination = new File(destination);
-        FileUtils.copyFile(source, finalDestination);
-        return destination;
-    }
-
 }
 
 

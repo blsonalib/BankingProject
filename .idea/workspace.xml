@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660c1d94-3888-4c1d-aafd-e4a4e739056c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/banking/util/IAutoConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -13,34 +12,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bankingapplication.log" beforeDir="false" afterPath="$PROJECT_DIR$/bankingapplication.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/banking/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/banking/base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/banking/pages/ManagerHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/banking/pages/ManagerHomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/banking/pages/NewCustomerPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/banking/pages/NewCustomerPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/banking/extendreport/ExtentReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/banking/extendreport/ExtentReport.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/banking/util/JsonReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/banking/util/JsonReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/banking/util/TestUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/banking/util/TestUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/banking/testcases/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/banking/testcases/LoginTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/banking/testcases/ManagerHomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/banking/testcases/ManagerHomePageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/banking/testcases/NewCustomerPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/banking/testcases/NewCustomerPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.banking.testcases.LoginTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.banking.testcases.LoginTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.banking.testcases.LoginTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.banking.testcases.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.banking.testcases.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.banking.testcases.LoginTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.banking.testcases.LoginTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.banking.testcases.LoginTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/banking/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/banking/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/banking/extendreport/ExtentReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/banking/extendreport/ExtentReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/banking/pages/ManagerHomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/banking/pages/NewCustomerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/banking/pages/NewCustomerPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/banking/testdata/LoginData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/banking/testdata/LoginData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/banking/util/TestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/banking/util/TestUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/banking/testcases/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/banking/testcases/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/banking/testcases/ManagerHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/banking/testcases/ManagerHomePageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/banking/testcases/NewCustomerPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/banking/testcases/NewCustomerPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +92,7 @@
       <recent name="$PROJECT_DIR$/Driver" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTest.login">
+  <component name="RunManager" selected="TestNG./Users/sonalibankar/Desktop/BankingProject/src/test/testng.xml">
     <configuration name="LoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -145,12 +133,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="NewCustomerPageTest.addAllFieldOfNewCustomerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTest.verifyTitleOfLoginPageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.NewCustomerPageTest.addAllFieldOfNewCustomerTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.LoginTest.verifyTitleOfLoginPageTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -165,12 +153,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="NewCustomerPageTest.clickOnHomeLinkReturnTohomePageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'BankingProject.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.NewCustomerPageTest.clickOnHomeLinkReturnTohomePageTest&quot;" />
+        <option name="scriptParameters" value="--tests *" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -185,33 +173,30 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="NewCustomerPageTest.verifyTitleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.banking.testcases.NewCustomerPageTest.verifyTitleTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
+    <configuration name="/Users/sonalibankar/Desktop/BankingProject/src/test/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BankingProject.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.LoginTest" />
+      <item itemvalue="Gradle.Tests in 'BankingProject.test'" />
+      <item itemvalue="TestNG./Users/sonalibankar/Desktop/BankingProject/src/test/testng.xml" />
+      <item itemvalue="Gradle.LoginTest.verifyTitleOfLoginPageTest" />
+      <item itemvalue="Gradle.LoginTest.login" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./Users/sonalibankar/Desktop/BankingProject/src/test/testng.xml" />
         <item itemvalue="Gradle.LoginTest.login" />
-        <item itemvalue="Gradle.NewCustomerPageTest.verifyTitleTest" />
+        <item itemvalue="Gradle.LoginTest.verifyTitleOfLoginPageTest" />
         <item itemvalue="Gradle.LoginTest" />
-        <item itemvalue="Gradle.NewCustomerPageTest.addAllFieldOfNewCustomerTest" />
-        <item itemvalue="Gradle.NewCustomerPageTest.clickOnHomeLinkReturnTohomePageTest" />
+        <item itemvalue="Gradle.Tests in 'BankingProject.test'" />
       </list>
     </recent_temporary>
   </component>
@@ -247,30 +232,38 @@
     </state>
     <state x="310" y="151" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1590037329640" />
     <state x="310" y="158" key="#Project_Structure/0.23.1680.939@0.23.1680.939" timestamp="1589872771938" />
+    <state x="304" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590148667524">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state x="304" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.939@0.23.1680.939" timestamp="1590148667524" />
     <state x="578" y="246" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590062612981">
       <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state x="578" y="246" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.939@0.23.1680.939" timestamp="1590062612981" />
-    <state width="1638" height="276" key="GridCell.Tab.0.bottom" timestamp="1590068346745">
+    <state width="1638" height="221" key="GridCell.Tab.0.bottom" timestamp="1590156863084">
       <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state width="1638" height="324" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1590039063985" />
-    <state width="1638" height="276" key="GridCell.Tab.0.bottom/0.23.1680.939@0.23.1680.939" timestamp="1590068346745" />
-    <state width="1638" height="276" key="GridCell.Tab.0.center" timestamp="1590068346744">
+    <state width="1638" height="221" key="GridCell.Tab.0.bottom/0.23.1680.939@0.23.1680.939" timestamp="1590156863084" />
+    <state width="1638" height="221" key="GridCell.Tab.0.bottom/0.23.1680.944@0.23.1680.944" timestamp="1590155311317" />
+    <state width="1638" height="221" key="GridCell.Tab.0.center" timestamp="1590156863084">
       <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state width="1638" height="324" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1590039063984" />
-    <state width="1638" height="276" key="GridCell.Tab.0.center/0.23.1680.939@0.23.1680.939" timestamp="1590068346744" />
-    <state width="1638" height="276" key="GridCell.Tab.0.left" timestamp="1590068346743">
+    <state width="1638" height="221" key="GridCell.Tab.0.center/0.23.1680.939@0.23.1680.939" timestamp="1590156863084" />
+    <state width="1638" height="221" key="GridCell.Tab.0.center/0.23.1680.944@0.23.1680.944" timestamp="1590155311316" />
+    <state width="1638" height="221" key="GridCell.Tab.0.left" timestamp="1590156863083">
       <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state width="1638" height="324" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1590039063983" />
-    <state width="1638" height="276" key="GridCell.Tab.0.left/0.23.1680.939@0.23.1680.939" timestamp="1590068346743" />
-    <state width="1638" height="276" key="GridCell.Tab.0.right" timestamp="1590068346744">
+    <state width="1638" height="221" key="GridCell.Tab.0.left/0.23.1680.939@0.23.1680.939" timestamp="1590156863083" />
+    <state width="1638" height="221" key="GridCell.Tab.0.left/0.23.1680.944@0.23.1680.944" timestamp="1590155311315" />
+    <state width="1638" height="221" key="GridCell.Tab.0.right" timestamp="1590156863084">
       <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state width="1638" height="324" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1590039063985" />
-    <state width="1638" height="276" key="GridCell.Tab.0.right/0.23.1680.939@0.23.1680.939" timestamp="1590068346744" />
+    <state width="1638" height="221" key="GridCell.Tab.0.right/0.23.1680.939@0.23.1680.939" timestamp="1590156863084" />
+    <state width="1638" height="221" key="GridCell.Tab.0.right/0.23.1680.944@0.23.1680.944" timestamp="1590155311316" />
     <state width="1378" height="310" key="GridCell.Tab.1.bottom" timestamp="1588706080877">
       <screen x="0" y="23" width="1680" height="939" />
     </state>
@@ -295,6 +288,10 @@
       <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state x="553" y="215" key="MultipleFileMergeDialog/0.23.1680.939@0.23.1680.939" timestamp="1590049823860" />
+    <state x="588" y="221" key="RollbackChangesDialog" timestamp="1590148972422">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state x="588" y="221" key="RollbackChangesDialog/0.23.1680.939@0.23.1680.939" timestamp="1590148972422" />
     <state x="219" y="121" key="SettingsEditor" timestamp="1589912754579">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -313,5 +310,12 @@
       <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state x="595" y="212" key="git4idea.branch.GitSmartOperationDialog/0.23.1680.939@0.23.1680.939" timestamp="1590049782046" />
+    <state x="547" y="115" key="refactoring.ChangeSignatureDialog" timestamp="1590156200822">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state x="547" y="115" key="refactoring.ChangeSignatureDialog/0.23.1680.939@0.23.1680.939" timestamp="1590156200822" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BankingProject$Tests_in__BankingProject_test_.ic" NAME="Tests in 'BankingProject.test' Coverage Results" MODIFIED="1590148765936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

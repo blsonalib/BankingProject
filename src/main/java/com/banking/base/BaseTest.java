@@ -3,11 +3,16 @@ package com.banking.base;
 
 import com.banking.util.IAutoConstant;
 import com.banking.util.TestUtil;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -45,6 +50,13 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_TIMEOUT,TimeUnit.SECONDS);
         driver.get(properties.getProperty("url"));
+    }
+    public static void captureScreen(WebDriver driver, Class<? extends ITestResult> tname) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
+        FileUtils.copyFile(source, target);
+        System.out.println("Screenshot taken");
     }
 
 }
