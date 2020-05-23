@@ -13,27 +13,33 @@ public class ManagerHomePage extends BaseTest {
     @FindBy(linkText = "New Account")
     private WebElement newAccount;
     @FindBy(xpath = "//div[contains(text(),'Log out')]")
-    private WebElement logOutt;
-    public ManagerHomePage(){
-        PageFactory.initElements(driver,this);
+    private WebElement logOut;
+
+    public ManagerHomePage() {
+        PageFactory.initElements(driver, this);
     }
-    public String verifyTitle(){
+
+    public String verifyTitle() {
         return driver.getTitle();
     }
-    public NewCustomerPage clickOnNewCustomerLink(){
+
+    public NewCustomerPage clickOnNewCustomerLink() {
         newCustomerLink.click();
         return new NewCustomerPage();
     }
-    public EditCustomer clickOnEditCustomerLink(){
+
+    public EditCustomer clickOnEditCustomerLink() {
         editCustomerLink.click();
         return new EditCustomer();
     }
-    public NewAccount clickOnNewAccountLink(){
+
+    public NewAccount clickOnNewAccountLink() {  //getClickOnNewAccountLink
         newAccount.click();
         return new NewAccount();
     }
-    public LogOutPage clickOnLogOutPage(){
-        logOutt.click();
+
+    public LogOutPage clickOnLogOutPage() {
+        logOut.click();
         return new LogOutPage();
     }
 }

@@ -14,13 +14,16 @@ public class LoginPage extends BaseTest {
     private WebElement loginButton;
     @FindBy(name = "btnReset")
     private WebElement resetButton;
-    public LoginPage(){
-        PageFactory.initElements(driver,this);
+
+    public LoginPage() {
+        PageFactory.initElements(driver, this);
     }
-    public String verifyTitleOfLoginPage(){
+
+    public String verifyTitleOfLoginPage() {
         return driver.getTitle();
     }
-    public ManagerHomePage login(String un,String pw){
+
+    public ManagerHomePage login(String un, String pw) {
         userID.sendKeys(un);
         password.sendKeys(pw);
         loginButton.click();
