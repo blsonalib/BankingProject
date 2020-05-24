@@ -7,18 +7,20 @@ import com.banking.pages.LoginPage;
 import com.banking.pages.ManagerHomePage;
 import com.banking.util.IAutoConstant;
 import com.banking.util.JsonReader;
+import com.banking.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class LoginTest extends BaseTest {
     private LoginPage loginPage;
     private ManagerHomePage managerHomePage;
     private CreateMangerCredentialPage mangerCredentialPage;
-    BasePage titleOfPage;
+    private BasePage titleOfPage;
 
     @BeforeMethod
     public void setUp() {
@@ -30,9 +32,10 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void verifyTitleOfLoginPageTest() {
+    public void verifyTitleOfLoginPageTest() throws IOException {
         String title = titleOfPage.getTitleOnPage();
         Assert.assertEquals(title, IAutoConstant.LOGIN_PAGE_TITLE);
+        TestUtil.captureScreen(driver,"verifyTitleOfLoginPageTest");
     }
 
     @Test(dataProvider = "Login")

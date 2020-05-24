@@ -3,6 +3,7 @@ package com.banking.base;
 
 import com.banking.util.IAutoConstant;
 import com.banking.util.TestUtil;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -10,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.xml.sax.Locator;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,13 +38,12 @@ public class BaseClass extends BasePage {
         }
     }
 
-    public static void initialize() {
-        String browseName = properties.getProperty("browser");
-        if (browseName.equalsIgnoreCase("chrome")) {
-            System.setProperty(IAutoConstant.CHROM_KEY, IAutoConstant.CHROM_VALUE);
+    public static void initialize(String browser) {
+        if(browser.equalsIgnoreCase("chrome")){
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-        } else if (browseName.equalsIgnoreCase("firefox")) {
-            System.setProperty(IAutoConstant.GECKO_KEY, IAutoConstant.GECKO_VALUE);
+        }else if(browser.equalsIgnoreCase("fireFox")){
+            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
         driver.manage().deleteAllCookies();
@@ -51,17 +52,9 @@ public class BaseClass extends BasePage {
         driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_TIMEOUT, TimeUnit.SECONDS);
         driver.get(properties.getProperty("url"));
     }
-
-    public static void captureScreen(WebDriver driver, String tname) throws IOException {
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
-        FileUtils.copyFile(source, target);
-        System.out.println("Screenshot taken");
-    }
-
     @Override
     public String getTitleOnPage() {
         return driver.getTitle();       //override
     }
+
 }

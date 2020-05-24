@@ -15,8 +15,8 @@ public class NewCustomerPageTest extends BaseTest {
     private NewCustomerPage newCustomerPage;
     private LoginPage loginPage;
     private ManagerHomePage managerHomePage;
-    CreateMangerCredentialPage mangerCredentialPage;
-    BasePage titleOfPage;
+    private CreateMangerCredentialPage mangerCredentialPage;
+    private BasePage titleOfPage;
 
     @BeforeMethod
     public void setUp() {
@@ -58,6 +58,6 @@ public class NewCustomerPageTest extends BaseTest {
     @Test
     public void clickOnHomeLinkReturnTohomePageTest() {
         managerHomePage = newCustomerPage.clickOnHomeLink();
-        log.info("return to home page");
+        log.info("Return to home page");
     }
 }

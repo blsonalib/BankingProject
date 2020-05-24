@@ -28,18 +28,8 @@ public class ManagerHomePage extends BaseClass {
         return new NewCustomerPage();
     }
 
-    public EditCustomer getClickOnEditCustomerLink() {
+    public EditCustomerPage getClickOnEditCustomerLink() {
         editCustomerLink.click();
-        return new EditCustomer();
-    }
-
-    public NewAccount getClickOnNewAccountLink() {  //getClickOnNewAccountLink
-        newAccount.click();
-        return new NewAccount();
-    }
-
-    public LogOutPage getClickOnLogOutPage() {
-        logOut.click();
-        return new LogOutPage();
+        return new EditCustomerPage();
     }
 }
