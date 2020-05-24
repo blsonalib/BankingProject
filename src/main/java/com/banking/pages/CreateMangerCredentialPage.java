@@ -26,7 +26,7 @@ public class CreateMangerCredentialPage extends BaseClass {
     public boolean verifyLogo(){
        return logo.isDisplayed();
     }
-    public LoginPage getBankinProjectLink(){
+    public LoginPage getCilckOnBankinProjectLink(){
         bankingProjectLink.click();
         return new LoginPage();
     }

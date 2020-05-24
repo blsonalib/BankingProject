@@ -19,10 +19,6 @@ public class LoginPage extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    public String verifyTitleOfLoginPage() {
-        return driver.getTitle();
-    }
-
     public ManagerHomePage login(String un, String pw) {
         userID.sendKeys(un);
         password.sendKeys(pw);

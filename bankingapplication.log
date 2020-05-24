@@ -1,1 +1,4 @@
-2020-05-24 17:31:48,966  INFO [Test worker] BaseClass:62 - Browser closed
+2020-05-24 19:33:17,410  INFO [Test worker] BaseClass:28 - Click on banking project link
+2020-05-24 19:33:19,149  INFO [Test worker] BaseClass:30 - Enter email and password
+2020-05-24 19:33:20,638  INFO [Test worker] BaseClass:33 - Click on new customer link
+2020-05-24 19:33:22,132  INFO [Test worker] BaseClass:55 - enter all the data of new customer and click on submit link

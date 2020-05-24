@@ -9,30 +9,29 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ManagerHomePageTest extends BaseClass {
+public class ManagerHomePageTest extends BaseTest {
     private ManagerHomePage managerHomePage;
     private LoginPage loginPage;
     private NewCustomerPage newCustomerPage;
     private EditCustomer editCustomer;
     private NewAccount newAccount;
     private LogOutPage logOutPage;
+    private CreateMangerCredentialPage mangerCredentialPage;
     BasePage titleOfPage;
-    public ManagerHomePageTest() {
-        super();
-    }
 
     @BeforeMethod
     public void setUp() {
-        initialize();
         loginPage = new LoginPage();
         titleOfPage = new BaseClass();
-        managerHomePage = loginPage.login(properties.getProperty("userID"), properties.getProperty("password"));
-        log.info("enter email and password");
         managerHomePage = new ManagerHomePage();
         newCustomerPage = new NewCustomerPage();
         editCustomer = new EditCustomer();
         newAccount = new NewAccount();
         logOutPage = new LogOutPage();
+        mangerCredentialPage = new CreateMangerCredentialPage();
+        loginPage = mangerCredentialPage.getCilckOnBankinProjectLink();
+        managerHomePage = loginPage.login(properties.getProperty("userID"), properties.getProperty("password"));
+        log.info("enter email and password");
     }
 
     @Test

@@ -13,19 +13,14 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class CreateManagerCredentialTest extends BaseClass {
+public class CreateManagerCredentialTest extends BaseTest {
     private CreateMangerCredentialPage mangerCredentialPage;
     public LoginPage loginPage;
     public ManagerHomePage managerHomePage;
     BasePage titleOfPage;
 
-    public CreateManagerCredentialTest() {
-        super();
-    }
-
     @BeforeMethod
     public void setUp() {
-        initialize();
         mangerCredentialPage = new CreateMangerCredentialPage();
         loginPage = new LoginPage();
         managerHomePage = new ManagerHomePage();
@@ -53,7 +48,7 @@ public class CreateManagerCredentialTest extends BaseClass {
 
     @Test
     public void getBankingProjectLinkTest() {
-        loginPage = mangerCredentialPage.getBankinProjectLink();
+        loginPage = mangerCredentialPage.getCilckOnBankinProjectLink();
     }
 
     @AfterMethod

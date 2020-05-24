@@ -1,37 +1,42 @@
 package com.banking.testcases;
 
 import com.banking.base.BaseClass;
+import com.banking.base.BasePage;
+import com.banking.pages.CreateMangerCredentialPage;
 import com.banking.pages.LoginPage;
 import com.banking.pages.ManagerHomePage;
 import com.banking.pages.NewCustomerPage;
+import com.banking.util.IAutoConstant;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class NewCustomerPageTest extends BaseClass {
-    NewCustomerPage newCustomerPage;
-    LoginPage loginPage;
-    ManagerHomePage managerHomePage;
-    public NewCustomerPageTest() {
-        super();
-    }
+public class NewCustomerPageTest extends BaseTest {
+    private NewCustomerPage newCustomerPage;
+    private LoginPage loginPage;
+    private ManagerHomePage managerHomePage;
+    CreateMangerCredentialPage mangerCredentialPage;
+    BasePage titleOfPage;
 
     @BeforeMethod
     public void setUp() {
-        initialize();
         loginPage = new LoginPage();
         managerHomePage = new ManagerHomePage();
-        managerHomePage = loginPage.login(properties.getProperty("userID"),properties.getProperty("password"));
-        log.info("enter email and password");
+        titleOfPage = new BaseClass();
+        mangerCredentialPage = new CreateMangerCredentialPage();
+        loginPage = mangerCredentialPage.getCilckOnBankinProjectLink();
+        log.info("Click on banking project link");
+        managerHomePage = loginPage.login(properties.getProperty("userID"), properties.getProperty("password"));
+        log.info("Enter email and password");
         newCustomerPage = new NewCustomerPage();
-        newCustomerPage = managerHomePage.clickOnNewCustomerLink();
-        log.info("click on new customer link");
+        newCustomerPage = managerHomePage.getClickOnNewCustomerLink();
+        log.info("Click on new customer link");
     }
 
     @Test
-    public void verifyTitleTest(){
-        String titleName = newCustomerPage.verifyTitle();
-        Assert.assertEquals(titleName,"Gtpl Bank New Customer Entry Page");
+    public void verifyTitleTest() {
+        String title = titleOfPage.getTitleOnPage();       //override
+        Assert.assertEquals(title, IAutoConstant.NEW_COSTOMER_PAGE_TITLE);
         log.info("title is matched");
     }
 

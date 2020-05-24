@@ -10,4 +10,5 @@ public interface IAutoConstant {
     String LOGIN_PAGE_TITLE = "GTPL Bank Home Page";
     String CREATE_MANAGER_CREDENTIAL_TITLE = "Guru99 Bank Home Page";
     String MANAGER_HOMEPAGE_PAGE_TITLE = "GTPL Bank Manager HomePage";
+    String NEW_COSTOMER_PAGE_TITLE ="Gtpl Bank New Customer Entry Page";
 }
