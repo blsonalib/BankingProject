@@ -1,6 +1,6 @@
 package com.banking.testcases;
 
-import com.banking.base.BaseTest;
+import com.banking.base.BaseClass;
 import com.banking.pages.LoginPage;
 import com.banking.pages.ManagerHomePage;
 import com.banking.pages.NewCustomerPage;
@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class NewCustomerPageTest extends BaseTest {
+public class NewCustomerPageTest extends BaseClass {
     NewCustomerPage newCustomerPage;
     LoginPage loginPage;
     ManagerHomePage managerHomePage;

@@ -1,11 +1,11 @@
 package com.banking.pages;
 
-import com.banking.base.BaseTest;
+import com.banking.base.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewCustomerPage extends BaseTest {
+public class NewCustomerPage extends BaseClass {
     @FindBy(name = "name")
     private WebElement customerName;
     @FindBy(name = "rad1")

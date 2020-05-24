@@ -1,11 +1,11 @@
 package com.banking.pages;
 
-import com.banking.base.BaseTest;
+import com.banking.base.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ManagerHomePage extends BaseTest {
+public class ManagerHomePage extends BaseClass {
     @FindBy(xpath = "//a[contains(text(),'New Customer')]")
     private WebElement newCustomerLink;
     @FindBy(xpath = "//a[contains(text(),'Edit Customer')]")
@@ -23,22 +23,22 @@ public class ManagerHomePage extends BaseTest {
         return driver.getTitle();
     }
 
-    public NewCustomerPage clickOnNewCustomerLink() {
+    public NewCustomerPage getClickOnNewCustomerLink() {
         newCustomerLink.click();
         return new NewCustomerPage();
     }
 
-    public EditCustomer clickOnEditCustomerLink() {
+    public EditCustomer getClickOnEditCustomerLink() {
         editCustomerLink.click();
         return new EditCustomer();
     }
 
-    public NewAccount clickOnNewAccountLink() {  //getClickOnNewAccountLink
+    public NewAccount getClickOnNewAccountLink() {  //getClickOnNewAccountLink
         newAccount.click();
         return new NewAccount();
     }
 
-    public LogOutPage clickOnLogOutPage() {
+    public LogOutPage getClickOnLogOutPage() {
         logOut.click();
         return new LogOutPage();
     }

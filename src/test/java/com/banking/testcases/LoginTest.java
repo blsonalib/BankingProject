@@ -1,6 +1,7 @@
 package com.banking.testcases;
 
-import com.banking.base.BaseTest;
+import com.banking.base.BaseClass;
+import com.banking.base.BasePage;
 import com.banking.pages.CreateMangerCredentialPage;
 import com.banking.pages.LoginPage;
 import com.banking.pages.ManagerHomePage;
@@ -12,9 +13,11 @@ import org.testng.annotations.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class LoginTest extends BaseTest {
+public class LoginTest extends BaseClass {
     private LoginPage loginPage;
     private ManagerHomePage managerHomePage;
+    private CreateMangerCredentialPage mangerCredentialPage;
+    BasePage titleOfPage;
 
     public LoginTest() {
         super();
@@ -23,16 +26,18 @@ public class LoginTest extends BaseTest {
     @BeforeMethod
     public void setUp() {
         initialize();
+        mangerCredentialPage = new CreateMangerCredentialPage();
         loginPage = new LoginPage();
         managerHomePage = new ManagerHomePage();
+        titleOfPage = new BaseClass();
+        loginPage = mangerCredentialPage.getBankinProjectLink();
+        managerHomePage = loginPage.login(properties.getProperty("userID"), properties.getProperty("password"));
     }
 
     @Test
     public void verifyTitleOfLoginPageTest() throws IOException {
-        //captureScreen(driver, "verifyTitleOfLoginPageTest");
-        String title = loginPage.verifyTitleOfLoginPage();
-        Assert.assertEquals(title, IAutoConstant.LOGIN_PAGE_TITLE, "Title not matche");
-        log.info("Title is matched");
+        String title = titleOfPage.getTitleOnPage();
+        Assert.assertEquals(title,IAutoConstant.LOGIN_PAGE_TITLE);
     }
 
     @Test(dataProvider = "Login")
@@ -47,7 +52,8 @@ public class LoginTest extends BaseTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown() throws IOException {
         driver.quit();
+        log.info("Browser closed");
     }
 }

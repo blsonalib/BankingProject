@@ -1,11 +1,11 @@
 package com.banking.pages;
 
-import com.banking.base.BaseTest;
+import com.banking.base.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends BaseTest {
+public class LoginPage extends BaseClass {
     @FindBy(name = "uid")
     private WebElement userID;
     @FindBy(name = "password")

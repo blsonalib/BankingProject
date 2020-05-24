@@ -1,6 +1,6 @@
 package com.banking.pages;
 
-import com.banking.base.BaseTest;
+import com.banking.base.BaseClass;
 
-public class LogOutPage extends BaseTest {
+public class LogOutPage extends BaseClass {
 }
