@@ -18,11 +18,6 @@ public class ManagerHomePage extends BaseClass {
     public ManagerHomePage() {
         PageFactory.initElements(driver, this);
     }
-
-    public String verifyTitle() {
-        return driver.getTitle();
-    }
-
     public NewCustomerPage getClickOnNewCustomerLink() {
         newCustomerLink.click();
         return new NewCustomerPage();

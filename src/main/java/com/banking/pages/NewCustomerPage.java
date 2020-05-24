@@ -31,9 +31,6 @@ public class NewCustomerPage extends BaseClass {
     public NewCustomerPage(){
         PageFactory.initElements(driver,this);
     }
-    public String verifyTitle(){
-       return driver.getTitle();
-    }
     public void setCustomerName(String cName){
         customerName.sendKeys(cName);
     }

@@ -54,6 +54,8 @@ public class ExtentReport extends TestListenerAdapter {
         logger=extent.createTest(result.getName()); // create new entry in th report
         logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
         logger.log(Status.FAIL,MarkupHelper.createCodeBlock(result.getName()));
+        logger.log(Status.FAIL,result.getThrowable());
+
         String screenshotPath = System.getProperty("user.dir")+"/Screenshots/"+result.getName()+".png";
         File f = new File(screenshotPath);
 

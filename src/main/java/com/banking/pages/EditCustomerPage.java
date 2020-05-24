@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class EditCustomerPage extends BaseClass {
    @FindBy(name = "cusid")
     private WebElement accountNo;
-   @FindBy(id = "AccSubmit")
+   @FindBy(xpath = "//input[@value='Submit']")
     private WebElement submitButton;
     @FindBy(xpath = "//a[contains(text(),'Home')]")
     private WebElement clickOnHome;
@@ -18,6 +18,10 @@ public class EditCustomerPage extends BaseClass {
    public void setAccountNo(String accountNumber){
        accountNo.sendKeys(accountNumber);
    }
+    public void setAccountNo(){   //overloading
+        accountNo.sendKeys();
+    }
+
    public void getClickOnSubmitbutton(){
        submitButton.click();
    }

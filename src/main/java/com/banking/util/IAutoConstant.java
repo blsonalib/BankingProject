@@ -7,7 +7,7 @@ public interface IAutoConstant {
     String GECKO_VALUE = "Users/sonalibankar/Desktop/FacebookProject/Driver/geckodriver";
     String CONFIG_FILE_PATH = "/Users/sonalibankar/Desktop/BankingProject/src/main/java/com/banking/config/config.properties";
     String JSON_LOGIN_PATH = "/Users/sonalibankar/Desktop/BankingProject/src/main/java/com/banking/testdata/LoginData.json";
-    String LOGIN_PAGE_TITLE = "GTPL Bank Home Page";
+    String LOGIN_PAGE_TITLE = "GTPL Bank Home Page12";
     String CREATE_MANAGER_CREDENTIAL_TITLE = "Guru99 Bank Home Page";
     String MANAGER_HOMEPAGE_PAGE_TITLE = "GTPL Bank Manager HomePage";
     String NEW_COSTOMER_PAGE_TITLE ="Gtpl Bank New Customer Entry Page";

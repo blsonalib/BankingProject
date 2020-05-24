@@ -14,7 +14,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class LoginTest extends BaseTest {
     private LoginPage loginPage;
@@ -24,21 +23,21 @@ public class LoginTest extends BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        mangerCredentialPage = new CreateMangerCredentialPage();
         loginPage = new LoginPage();
         managerHomePage = new ManagerHomePage();
         titleOfPage = new BaseClass();
+        mangerCredentialPage = new CreateMangerCredentialPage();
         loginPage = mangerCredentialPage.getCilckOnBankinProjectLink();
     }
 
-    @Test
-    public void verifyTitleOfLoginPageTest() throws IOException {
+    @Test(description = "Login page title test")
+    public void verifyTitleOfLoginPageTest()  {
         String title = titleOfPage.getTitleOnPage();
         Assert.assertEquals(title, IAutoConstant.LOGIN_PAGE_TITLE);
-        TestUtil.captureScreen(driver,"verifyTitleOfLoginPageTest");
+
     }
 
-    @Test(dataProvider = "Login")
+   @Test(dataProvider = "Login",description = "Login with credential")
     public void login(String userName, String password) {
         managerHomePage = loginPage.login(userName, password);
         Assert.assertNotNull(managerHomePage);

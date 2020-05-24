@@ -11,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
 import org.xml.sax.Locator;
 
 import java.io.File;
@@ -38,6 +39,7 @@ public class BaseClass extends BasePage {
         }
     }
 
+    @Parameters(value = {"browser"})
     public static void initialize(String browser) {
         if(browser.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
@@ -51,6 +53,13 @@ public class BaseClass extends BasePage {
         driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_TIMEOUT, TimeUnit.SECONDS);
         driver.get(properties.getProperty("url"));
+    }
+    public static void captureScreen(WebDriver driver, String tname) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
+        FileUtils.copyFile(source, target);
+        System.out.println("Screenshot taken");
     }
     @Override
     public String getTitleOnPage() {

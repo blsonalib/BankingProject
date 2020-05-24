@@ -19,7 +19,7 @@ public class BaseTest extends BaseClass {
         log.info("intialize the browser");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
         driver.quit();
         log.info("Close the browser");

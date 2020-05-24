@@ -3,14 +3,25 @@
 <suite name="All Test Suite">
     <listeners>
         <listener class-name="com.banking.report.ExtentReport"/>
-
     </listeners>
-    <test verbose="2" preserve-order="true"
-          name="BankingProject">
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
         <classes>
-           <class name="com.banking.testcases.LoginTest"/>
-            <!-- <class name="com.banking.testcases.ManagerHomePageTest"/> !-->
-            <!-- <class name="com.banking.testcases.NewCustomerPageTest"/> !-->
-         </classes>
-     </test>
- </suite>
+            <class name="com.banking.testcases.LoginTest"/>
+            <class name="com.banking.testcases.ManagerHomePageTest"/>
+            <class name="com.banking.testcases.NewCustomerPageTest"/>
+            <class name="com.banking.testcases.CreateManagerCredentialTest"/>
+            <class name="com.banking.testcases.EditCustomerPageTest"/>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="fireFox"/>
+        <classes>
+            <class name="com.banking.testcases.LoginTest"/>
+            <class name="com.banking.testcases.ManagerHomePageTest"/>
+            <class name="com.banking.testcases.NewCustomerPageTest"/>
+            <class name="com.banking.testcases.CreateManagerCredentialTest"/>
+            <class name="com.banking.testcases.EditCustomerPageTest"/>
+        </classes>
+    </test>
+</suite>

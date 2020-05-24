@@ -11,7 +11,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 
 public class CreateManagerCredentialTest extends BaseTest {
     private CreateMangerCredentialPage mangerCredentialPage;
@@ -27,33 +26,27 @@ public class CreateManagerCredentialTest extends BaseTest {
         titleOfPage = new BaseClass();
     }
 
-    @Test
+    @Test(description = "Create manager credential page test")
     public void verifyTitleOfCreateManagerCredentialPage() {
         String title = titleOfPage.getTitleOnPage();
         Assert.assertEquals(title, IAutoConstant.CREATE_MANAGER_CREDENTIAL_TITLE);
     }
 
-    @Test
+    @Test(description = "verify the logo")
     public void verifyLogoTest() {
         boolean logo = mangerCredentialPage.verifyLogo();
         Assert.assertTrue(logo);
     }
 
-    @Test
+    @Test(description = "Loging this page by email id and click on submit button then create manger credential")
     public void loginWithEmailIdTest() {
         mangerCredentialPage.setEmailID(properties.getProperty("emailId"));
         mangerCredentialPage.clickOnSubmitButton();
 
     }
 
-    @Test
+    @Test(description = "Click on banking project link then open the login page")
     public void getBankingProjectLinkTest() {
         loginPage = mangerCredentialPage.getCilckOnBankinProjectLink();
-    }
-
-    @AfterMethod
-    public void tearDown() throws IOException {
-        driver.quit();
-        log.info("Browser closed");
     }
 }

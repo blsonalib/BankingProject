@@ -4,10 +4,13 @@ import com.banking.base.BaseClass;
 import com.banking.base.BasePage;
 import com.banking.pages.*;
 import com.banking.util.IAutoConstant;
+import com.banking.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class ManagerHomePageTest extends BaseTest {
     private ManagerHomePage managerHomePage;
@@ -30,20 +33,22 @@ public class ManagerHomePageTest extends BaseTest {
         log.info("enter email and password");
     }
 
-    @Test
-    public void verifyTitleOfPageTest() {
+    @Test(description = "Manager page title test")
+    public void verifyTitleOfPageTest() throws IOException {
         String title = titleOfPage.getTitleOnPage();
         Assert.assertEquals(title, IAutoConstant.MANAGER_HOMEPAGE_PAGE_TITLE);
+        captureScreen(driver,"verifyTitleOfPageTest");
         log.info("Title is matched");
+
     }
 
-    @Test
+    @Test(description = "To click on new customer link new customer page open")
     public void clickOnNewCustomerPageTest() {
         newCustomerPage = managerHomePage.getClickOnNewCustomerLink();
         log.info("Click on new customer link");
     }
 
-    @Test
+    @Test(description = "To click on edit customer link new customer page open")
     public void clickOnEditCustomerPageTest() {
         editCustomer = managerHomePage.getClickOnEditCustomerLink();
         log.info("Click on edit customer link");

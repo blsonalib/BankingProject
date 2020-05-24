@@ -4,9 +4,12 @@ import com.banking.base.BaseClass;
 import com.banking.base.BasePage;
 import com.banking.pages.*;
 import com.banking.util.IAutoConstant;
+import com.banking.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class EditCustomerPageTest extends BaseTest{
     EditCustomerPage editCustomerPage;
@@ -30,19 +33,26 @@ public class EditCustomerPageTest extends BaseTest{
         log.info("Click on new customer link");
     }
 
-    @Test
+    @Test(description = "Edit customer page title")
     public void verifyTitleTest() {
         String title = titleOfPage.getTitleOnPage();
         Assert.assertEquals(title, IAutoConstant.EDIT_CUSTOMER_PAGE_TITLE);
     }
 
-    @Test
+    @Test(description = "Add the account number")
     public void addCustomerAccountNumberTest() {
         editCustomerPage.setAccountNo("1234567812345");
         editCustomerPage.getClickOnSubmitbutton();
     }
 
-    @Test
+    @Test(description = "Customer account number field is blank and click on submit button account not edit")
+    public void blankCustomerAccountNumberTest()  {
+        editCustomerPage.setAccountNo();                                 //negative scenario
+        editCustomerPage.getClickOnSubmitbutton();
+        log.info("Blank account number test case fail");
+    }
+
+    @Test(description = "Click on home link then return to manager page")
     public void clickOnHomeLinkReturnTohomePageTest() {
         managerHomePage = editCustomerPage.clickOnHomeLink();
         log.info("Return to home page");

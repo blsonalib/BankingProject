@@ -1,0 +1,16 @@
+{
+  "NewCustomer": [
+    {
+     "CustomerName" : "sona",
+      "dateOfBirth" : "19/05/1994",
+      "address" : "casaLotus",
+      "city" : "nagpur",
+      "state": "maharashtra",
+      "pinCode": "123454",
+      "mobileNumber": "1234567845",
+      "emailId": "sonabankar@gmail.com"
+    }
+  ]
+}
+
+
